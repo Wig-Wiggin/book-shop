@@ -2,5 +2,5 @@ package com.example.bookshop.entity;
 
 public enum PaymentMethod {
 
-    VISA,
+    VISA, MASTER, MPU
 }

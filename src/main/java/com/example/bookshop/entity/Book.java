@@ -28,13 +28,16 @@ public class Book {
 
     private int stock;
 
-    public Book(int id, String isbn, String title, String description, Double price, int stock) {
+    private String imgURL;
+
+    public Book(int id, String isbn, String title, String description, Double price, int stock,String imgURL) {
         this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.description = description;
         this.price = price;
         this.stock = stock;
+        this.imgURL = imgURL;
     }
 
     @ManyToOne
