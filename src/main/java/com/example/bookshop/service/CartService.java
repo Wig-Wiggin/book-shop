@@ -5,6 +5,8 @@ import com.example.bookshop.entity.Book;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
 @Service
 @RequiredArgsConstructor
 public class CartService {
@@ -27,4 +29,11 @@ public class CartService {
         cartBean.addCartItem(toCartItem(book));
     }
 
+    public Set<CartItem> getCartItems(){
+        return cartBean.getCartItems();
+    }
+
+    public void deleteCartItem(int id, String isbn) {
+        cartBean.deleteCartItem(id,isbn);
+    }
 }

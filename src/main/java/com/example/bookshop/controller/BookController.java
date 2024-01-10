@@ -39,6 +39,8 @@ public class BookController {
     }
 
 
+    // /book/book-details
+
     @GetMapping("/book-details")
     public String bookDetails(@RequestParam("id")Integer id, @RequestParam("isbn")String isbn,Model model){
         BookId bookId = null;
