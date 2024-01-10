@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class BookId implements Serializable {
 
     private int id;
