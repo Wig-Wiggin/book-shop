@@ -49,8 +49,9 @@ public class Book {
     @ManyToMany
     private List<Genre> genres = new ArrayList<>();
 
+
     @OneToMany(mappedBy = "book")
-    private List<OrderItem> orderItems = new ArrayList<>();
+   private List<OrderItem> orderItems = new ArrayList<>();
 
     public void addGenre(Genre genre){
         genre.getBooks().add(this);
@@ -59,6 +60,7 @@ public class Book {
 
     public void addOrderItem(OrderItem orderItem){
         orderItem.setBook(this);
-        orderItems.add(orderItem);
+        this.orderItems.add(orderItem);
     }
+
 }
